@@ -21,7 +21,7 @@ const App = () => {
         <SearchPanel />
         <PostStatusFilter />
       </div>
-      <PostList post={data} />
+      <PostList posts={data} />
       <PostAddForm />
     </div>
   );
