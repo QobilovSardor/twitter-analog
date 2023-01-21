@@ -28,12 +28,15 @@
   font-size: 16px;
 }
 
-.important {
+.app-list-item.important, .app-list-item-labe {
   color: #ffd700;
 }
 .btn-star {
-  color: #aeaeae;
+  color: #aeae;
 }
 .fa-heart {
   color: transparent;
 }
+/* .import {
+  color: #ffd700;
+} */

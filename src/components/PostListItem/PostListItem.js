@@ -1,12 +1,12 @@
 import './PostListItem.css'
 
-const PostListItem = ({label, important = false}) => {
+const PostListItem = ({label, important}) => {
   let classNames = 'app-list-item d-flex justify-content-between'
   if (important) {
     classNames += ' important'
   }
   return (
-    <li className={classNames}>
+    <div className={classNames}>
       <span className="app-list-item-label">
         {label}
       </span>
@@ -19,7 +19,7 @@ const PostListItem = ({label, important = false}) => {
         </button>
         <i className="fa fa-heart"></i>
       </div>
-    </li>
+    </div>
   );
 };
 
