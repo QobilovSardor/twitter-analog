@@ -28,15 +28,24 @@
   font-size: 16px;
 }
 
-.app-list-item.important, .app-list-item-labe {
+.app-list-item.important > .app-list-item-label {
   color: #ffd700;
+}
+.app-list-item.important .fa-star {
+  color: rgba(200, 195, 195, 0.933);
 }
 .btn-star {
   color: #aeae;
 }
 .fa-heart {
-  color: transparent;
+  color: red;
+  position: relative;
+  right: -100%;
+  transition: right 0.3s ease;
 }
 /* .import {
   color: #ffd700;
 } */
+.like .fa-heart {
+  right: 0;
+}
