@@ -1,9 +1,7 @@
 .app-list-item {
   font-size: 1.25rem;
 }
-.app-list-item-label {
-  cursor: pointer;
-}
+
 .app-list-item button {
   width: 35px;
   height: 35px;
@@ -12,42 +10,51 @@
   border: none;
   cursor: pointer;
 }
+
 .app-list-item button:focus {
   box-shadow: none;
   outline: none;
 }
+
 .app-list-item .btn-star {
-  color: #ffd700;
+  color: #FFD700;
 }
+
 .app-list-item .btn-trash {
   color: red;
 }
+
 .app-list-item .fa-heart {
   width: 35px;
   height: 35px;
   text-align: center;
   line-height: 35px;
   font-size: 16px;
+  color: red;
+  transition: 0.3s all;
+  transform: translateX(30px);
+  opacity: 0;
 }
 
-.app-list-item.important > .app-list-item-label {
-  color: #ffd700;
+.app-list-item-label {
+  display: block;
+  line-height: 35px;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.5s all;
 }
-.app-list-item.important .fa-star {
-  color: rgba(200, 195, 195, 0.933);
+.lik {
+  background: #000;
 }
-.btn-star {
-  color: #aeae;
+.app-list-item.like .fa-heart {
+  opacity: 1;
+  transform: translateX(0px);
 }
-.fa-heart {
-  color: red;
-  position: relative;
-  right: -100%;
-  transition: right 0.3s ease;
+
+.app-list-item.important .app-list-item-label {
+  color: #FFD700;
 }
-/* .import {
-  color: #ffd700;
-} */
-.like .fa-heart {
-  right: 0;
+
+.app-list-item.important .btn-star {
+  color: #aeaeae;
 }
