@@ -1,7 +1,9 @@
 .app-list-item {
   font-size: 1.25rem;
 }
-
+.app-list-item-label {
+  cursor: pointer;
+}
 .app-list-item button {
   width: 35px;
   height: 35px;

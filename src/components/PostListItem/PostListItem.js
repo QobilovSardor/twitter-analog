@@ -20,9 +20,10 @@ class PostListItem extends React.Component {
     this.setState(({liked}) => ({liked: !liked}))
   }
 
+
   render() {
     const { important, liked } = this.state
-    const { label } = this.props;
+    const { label, onDelete } = this.props;
     let classNames = 'app-list-item d-flex justify-content-between'
     if (important) {
       classNames += ' important'
@@ -39,7 +40,11 @@ class PostListItem extends React.Component {
           <button type="submit" className="btn-star btn-sm" onClick={this.onStartHendler}>
             <i className="fa fa-star"></i>
           </button>
-          <button type="submit" className="btn-trash btn-sm">
+          <button 
+            type="submit" 
+            className="btn-trash btn-sm"
+            onClick={onDelete}  
+          >
             <i className="fa fa-trash"></i>
           </button>
           <i className="fa fa-heart"></i>
