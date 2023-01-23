@@ -17,6 +17,9 @@ export default class App extends React.Component {
       ]
     }
     this.deleteItem = this.deleteItem.bind(this);
+    this.addItem = this.addItem.bind(this);
+
+    this.maxId = 4;
   }
 
   deleteItem(id) {
@@ -34,6 +37,20 @@ export default class App extends React.Component {
     })
   }
 
+  addItem(body) {
+    const newItem = {
+      label: body,
+      important: false,
+      id: this.maxId++
+    }
+    this.setState(({data}) => {
+      const newArr = [...data, newItem];
+      return {
+        data: newArr
+      }
+    })
+  }
+
   render() {
     return (
       <div className='app'>
@@ -43,7 +60,7 @@ export default class App extends React.Component {
           <PostStatusFilter />
         </div>
         <PostList posts={this.state.data} onDelete={this.deleteItem} />
-        <PostAddForm />
+        <PostAddForm onAdd={this.addItem} />
       </div>
     );
   }
